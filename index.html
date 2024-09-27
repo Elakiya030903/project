@@ -2,136 +2,229 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" 
-          content="IE=edge">
-    <meta name="viewport" 
-          content="width=device-width, initial-scale=1.0">
-    <title> Survey form </title>
-    <style>
-        body {
-            background-color: #be7336;
-            font-family: 'Times New Roman', Times, serif;
-            text-align: center;
-        }
-        form {
-            background-color: #ffffff;
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 30px 20px;
-            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-        }
-        .form-control {
-            text-align: left;
-            margin-bottom: 25px;
-        }
-        .form-control label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        .form-control input,
-        .form-control select,
-        .form-control textarea {
-            border: 1px solid #cabbbb;
-            border-radius: 2px;
-            font-family: inherit;
-            padding: 10px;
-            display: block;
-            width: 95%;
-        }
-        .form-control input[type="radio"],
-        .form-control input[type="checkbox"] {
-            display: inline-block;
-            width: auto;
-        }
-        button {
-            background-color: #6fac8f;
-            border: 2px solid #777;
-            border-radius: 2px;
-            font-family: inherit;
-            font-size: 21px;
-            display: block;
-            width: 100%;
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscount/unicons@4.0.8/css/line.min.css">
 </head>
-<body>
-    <h1>Survey Form for Students</h1>
-    <form id="form">
-        <div class="form-control">
-            <label for="name" id="label-name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name" />
-        </div>
-        <div class="form-control">
-            <label for="email" id="label-email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" />
-        </div>
-        <div class="form-control">
-            <label for="age" id="label-age"> Age </label>
-            <input type="text" id="age" placeholder="Enter your age" />
-        </div>
-        <div class="form-control">
-            <label for="role" id="label-role"> Which option best describes you? </label>
-            <select name="role" id="role">
-                <option value="student">Student</option>
-                <option value="intern">Intern</option>
-                <option value="professional"> Professional </option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-        <div class="form-control">
-            <label> Would you recommend GeeksforGeeks to a friend? </label>
-            <label for="recommed-1">
-                <input type="radio" id="recommed-1" name="recommed">Yes </input>
-            </label>
-            <label for="recommed-2">
-                <input type="radio" id="recommed-2" name="recommed">No </input>
-            </label>
-            <label for="recommed-3">
-                <input type="radio" id="recommed-3" name="recommed">Maybe </input>
-            </label>
-        </div>
-        <div class="form-control">
-            <label>Languages and Frameworks known
-                <small>(Check all that apply)</small>
-            </label>
-            <label for="inp-1">
-                <input type="checkbox" name="inp">C </input>
-              </label>
-            <label for="inp-2">
-                <input type="checkbox" name="inp">C++ </input>
-            </label>
-            <label for="inp-3">
-                <input type="checkbox" name="inp">C# </input>
-            </label>
-            <label for="inp-4">
-                <input type="checkbox" name="inp">Java </input>
-            </label>
-            <label for="inp-5">
-                <input type="checkbox" name="inp">Python </input>
-            </label>
-            <label for="inp-6">
-                <input type="checkbox" name="inp">JavaScript </input>
-            </label>
-            <label for="inp-7">
-                <input type="checkbox" name="inp">React </input>
-            </label>
-            <label for="inp-7">
-                <input type="checkbox" name="inp">Angular </input>
-            </label>
-            <label for="inp-7">
-                <input type="checkbox" name="inp">Django </input>
-            </label>
-            <label for="inp-7">
-                <input type="checkbox" name="inp">Spring </input>
-            </label>
-        </div>
-        <div class="form-control">
-            <label for="comment"> Any comments or suggestions </label>
-            <textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
-        </div>
-        <button type="submit" value="submit"> Submit </button>
-    </form>
+<body>   
+    <!------------Nav menu-------------->
+    <div class="container">
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Portfolio</p>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="#home" class="nav-link active-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#about" class="nav-link">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <!--------Dark mode--------->
+            <div class="mode">
+                <div class="moon-sun" id="toggle-switch">
+                    <i class="fa-solid fa-moon" id="moon"></i>
+                    <i class="fa-solid fa-sun" id="sun"></i>
+                </div>
+            </div> 
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <!----main---->
+        
+        <main class="wrapper">
+            <section class="featured-box" id="home">
+                <div class="featured-text">
+                    <div class="hello">
+                        <p>Hello!</p>
+                    </div>
+                    <div class="featured-name">
+                        <span class="typedText"></span>
+                    </div>
+                    <div class="text-info">
+                        <p>My name is Elakiya! I'm a web developer fresher</p>
+                    </div>
+                    <div class="text-btn">
+                        <button class="btn hire-btn">Hire Me</button>
+                        <button class="btn">Download CV<i class="uil uil-file"></i></button>
+                    </div>
+                    <div class="social_icons">
+                        <div class="icon_circle"></div>
+                        <div class="icon"><i class="fab fa-instagram"></i></div>
+                        <div class="icon"><i class="fa-brands fa-linkedin-in icon"></i></div>
+                        <div class="icon"><i class="fab fa-behance"></i></div>
+                        <div class="icon"><i class="fab fa-github"></i></div>
+                    </div>
+                </div>
+                <div class="featured-image">
+                    <div class="image">
+                        <img src="girl.jpg" alt="girl">
+                    </div> 
+                </div>
+            </section>
+            <!---about box-->
+            <section class="section" id="about">
+                <div class="top-header">
+                    <h1>About me</h1>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info">
+                            <figure class="about-me">
+                                <figcaption>
+                                    <img src="" alt="" class="profile"/>
+                                    <h2>Web developer</h2>
+                                    <p>My name is Elakiya! I'm a web developer looking for a Entry level position to develop my skills under a guidance</p>
+                                </figcaption>
+                            </figure>
+                            <button class="about-me-btn">Hire Me</button>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-box">
+                            <span class="title">HTML</span>
+                            <div class="skill-bar">
+                                <span class="skill-per html">
+                                    <span class="tooltip">80%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">CSS</span>
+                            <div class="skill-bar">
+                                <span class="skill-per css">
+                                    <span class="tooltip">80%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">Python</span>
+                            <div class="skill-bar">
+                                <span class="skill-per python">
+                                    <span class="tooltip">70%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">Javascript</span>
+                            <div class="skill-bar">
+                                <span class="skill-per javascript">
+                                    <span class="tooltip">50%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">PHP</span>
+                            <div class="skill-bar">
+                                <span class="skill-per php">
+                                    <span class="tooltip">30%</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!------Project box----->
+            <section class="section" id="projects">
+                <div class="top-header">
+                    <h1>Projects</h1>
+                </div>
+                <div class="project-container">
+                    <div class="project-box">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Smart agriculture based Artificial Intelligence Bot for Farmers</h3>
+                        <label>Developed a smart agriculture AI bot including image processing for soil
+                            and leaf testing, and an integrated chatbot to assist farmers. It provides
+                            real-time diagnostics, recommendations, enhancing crop management and
+                            addressing agricultural queries efficiently.</label>
+                    </div>
+                    <div class="project-box">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Experience</h3>
+                        <label>Fresher</label>
+                    </div>  
+                </div>
+            </section>
+            <!--contact box-->
+            <section class="section" id="contact">
+                <div class="top-header">
+                    <h1>Let's Work Together</h1>
+                    <span>If I'm impressed you, then contact me here...</span>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="contact-info">
+                            <h2>Find me<i class="uil uil-corner-right-down"></i></h2>
+                            <p><i class="uil uil-envelope"></i>Email:elakiyathinakar@gmail.com</p>
+                            <p><i class="uil uil-phone"></i>Phone:8903661359</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-control">
+                            <div class="form-inputs">
+                                <input type="text" class="input-field" placeholder="Your Name">
+                                <input type="text" class="input-field" placeholder="Your Email">
+                            </div>
+                            <div class="text-area">
+                                <input type="text" class="input-subject" placeholder="Subject">
+                                <textarea placeholder="message"></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button class="btn">Send<i class="uil uil-message"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!----footer--->
+        <footer>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-social-icons">
+                <div class="icon"><i class="fab fa-instagram"></i></div>
+                <div class="icon"><i class="fa-brands fa-linkedin-in icon"></i></div>
+                <div class="icon"><i class="fab fa-behance"></i></div>
+                <div class="icon"><i class="fab fa-github"></i></div>
+            </div>
+            <div class="bottom-footer">
+                <p>Copyright &copy;<a href="#home" style="text-decoration: none;">Portfolio</a>-All rights reserved 2024</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
